@@ -11,10 +11,6 @@ function debug_log(msg) {
 	document.body.appendChild(document.createElement("br"));
 }
 
-// The following functions are taken from https://github.com/saelo/jscpwn/:
-//  hex, hexlify, unhexlify, hexdump
-//  Copyright (c) 2016 Samuel Groß
-
 // Return the hexadecimal representation of the given byte.
 function hex(b) {
 	return ('0' + b.toString(16)).substr(-2);

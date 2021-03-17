@@ -1,7 +1,3 @@
-// Taken from https://github.com/saelo/jscpwn/blob/master/int64.js
-//
-// Copyright (c) 2016 Samuel Groß
-
 function Int64(low, high) {
     var bytes = new Uint8Array(8);
 

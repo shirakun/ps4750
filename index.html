@@ -1,44 +1,46 @@
+
 <html>
-
-<head>
-    <meta charset="utf-8" />
-</head>
-
-<body onload="go()">
+    <body  onload="go()">
     <script>
-        function print() { }
-
-        var scriptCode = '';
-
-        function preloadScripts(lst) {
-            for (var i = 0; i < lst.length; i++) {
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', lst[i], false);
-                xhr.send('');
-                scriptCode += xhr.responseText + '\n';
-            }
+    function print(){}
+    
+    var scriptCode = '';
+    
+    function preloadScripts(lst)
+    {
+        for(var i = 0; i < lst.length; i++)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', lst[i], false);
+            xhr.send('');
+            scriptCode += xhr.responseText + '\n';
         }
-
-        function done() {
-            if (main_ret == 0 || main_ret == 179) {
-                alert("成功!");
-                read_ptr_at(0);
-            }
-            else
-                alert("失败，请重启再试.");
+    }
+    
+    function done()
+    {
+        if(main_ret == 0 || main_ret == 179)
+        {
+            alert("成功!");
+            read_ptr_at(0);
         }
-
-        window.midExploit = function () {
-            preloadScripts(['750.js', 'c-code.js', 'mira.js', 'mira750.js', 'jb.js'], go);
-        }
-
-        window.postExploit = function () {
-            setTimeout(function () //update the screen one last time...
-            {
-                eval.call(window, scriptCode);
-                done();
-            }, 100);
-        };
+        else
+            alert("失败，请重启再试.");
+    }
+    
+    window.midExploit = function()
+    {
+        preloadScripts(['750.js', 'c-code.js', 'mira.js', s, 'jb.js'], go);
+    }
+    
+    window.postExploit = function()
+    {
+        setTimeout(function() //update the screen one last time...
+        {
+            eval.call(window, scriptCode);
+            done();
+        }, 100);
+    };
     </script>
     <script src="utils.js"></script>
     <script src="int64.js"></script>
@@ -47,8 +49,8 @@
     <button id="input2"></button>
     <button id="input3" onfocus="handle2()"></button>
     <select id="select1">
-        <option value="value1">Value1</option>
+    <option value="value1">Value1</option>
     </select>
-</body>
-
-</html>
+    </body>
+    </html>
+    
